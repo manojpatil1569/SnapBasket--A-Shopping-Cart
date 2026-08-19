@@ -162,6 +162,29 @@ button { font-family: inherit; cursor: pointer; }
   gap: 20px;
 }
 
+@media (min-width: 721px) {
+  .nav-inner {
+    max-width: none;
+    margin: 0;
+  }
+
+  .nav-inner:has(.nav-search) {
+    position: relative;
+  }
+
+  .nav-inner:has(.nav-search) .nav-search {
+    position: absolute;
+    left: calc(50% - 237px);
+    width: 420px;
+    max-width: none;
+  }
+
+  .nav-inner:has(.nav-search) .theme-toggle {
+    position: absolute;
+    left: calc(50% + 203px);
+  }
+}
+
 .brand {
   display: flex;
   align-items: baseline;
